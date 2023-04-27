@@ -7,7 +7,18 @@
 </head>
 <body>
 	<h1>Menú</h1>
+  <?php
+              session_start();
 
+                 
+               if (!isset($_SESSION['usuario']))
+                   {
+               header('Location: login.php');
+            exit();
+                }
+
+                echo 'Bienvenido, ' . $_SESSION['usuario'];
+                ?>  
         
         
 </body>

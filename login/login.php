@@ -20,7 +20,7 @@
                     <td>Nombre de usuario:
                     </td>
                     <td align='center'>
-                        <input type="text" id="usuario" name="usuario" placeholder="usuario" minlength="2" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <input type="text" id="usuario" name="usuario" placeholder="usuario" minlength="2" maxlength="30"  required>
                     </td>
                 </tr>
                 
@@ -28,7 +28,7 @@
                     <td>Contraseña:
                     </td>
                     <td align='center'>
-                        <input type="password" id="pass" name="pass" placeholder="contraseña" minlength="2" maxlength="30" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <input type="password" id="pass" name="pass" placeholder="contraseña" minlength="2" maxlength="30" required>
                     </td>
                 </tr>
             
@@ -49,14 +49,12 @@
       
       session_start();
       
-       $usuario = pedro;
-       $pass = 4567;
-      
+       
       $usuario = $_POST['usuario'];
       $pass = $_POST['pass'];
       
       
-      if ( $usuario == 'usuario' && $pass == 'pass')
+      if ( $usuario == 'pedro' && $pass == '4567')
       {
           
           $_SESSION['usuario'] = $usuario;
@@ -70,20 +68,7 @@
         }
 	
 	?>
-        
-           <?php
-              session_start();
-
-                 
-               if (!isset($_SESSION['usuario']))
-                   {
-               header('Location: login.php');
-            exit();
-                }
-
-                echo 'Bienvenido, ' . $_SESSION['usuario'];
-                ?>  
-        
+ 
    
 </body>
 </html>
